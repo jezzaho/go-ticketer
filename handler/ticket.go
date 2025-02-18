@@ -89,7 +89,7 @@ func (t *Ticket) List(w http.ResponseWriter, r *http.Request) {
 	}
 	var response struct {
 		Items []model.Ticket `json:"items"`
-		Next  uint64         `json:"next, omitempty"`
+		Next  uint64         `json:"next,omitempty"`
 	}
 	response.Items = res.Tickets
 	response.Next = res.Cursor
