@@ -44,7 +44,7 @@ func (r *RedisRepo) Insert(ctx context.Context, ticket model.Ticket) error {
 	return nil
 }
 
-var ErrNotExists = errors.New("order does not exist")
+var ErrNotExists = errors.New("ticket does not exist")
 
 func (r *RedisRepo) FindByID(ctx context.Context, id uint64) (model.Ticket, error) {
 	key := ticketIDKey(id)

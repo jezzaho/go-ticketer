@@ -31,4 +31,8 @@ func (app *App) loadTicketsRoutes(router chi.Router) {
 	}
 
 	router.Post("/", ticketHandler.Create)
+	router.Get("/{id}", ticketHandler.GetByID)
+	router.Get("/", ticketHandler.List)
+	router.Put("/{id}", ticketHandler.UpdateByID)
+	router.Delete("/{id}", ticketHandler.DeleteByID)
 }
